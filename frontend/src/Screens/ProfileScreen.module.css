@@ -1,0 +1,76 @@
+.btnBack {
+  display: inline-block;
+  background: var(--light-color);
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+.profileContainer {
+  display: grid;
+  grid-template-areas:
+    "top top"
+    "about about"
+    "exp edu"
+    "github github";
+  grid-gap: 1rem;
+  margin: 0 1rem;
+}
+
+.title {
+  color: var(--primary-color);
+}
+
+.profileExperience {
+  grid-area: exp;
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+  padding: 2rem;
+}
+
+.profileExperience h2 {
+  margin-bottom: 1rem;
+}
+
+.profileExperience > div {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: #ccc 1px dotted;
+}
+
+.profileExperience > div:last-child {
+  border: 0;
+}
+.profileExperience p {
+  margin: 0.5rem 0;
+}
+
+.profileEducation {
+  grid-area: edu;
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+  padding: 2rem;
+}
+
+.profileEducation h2 {
+  margin-bottom: 1rem;
+}
+
+.profileEducation > div {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: #ccc 1px dotted;
+}
+
+.profileEducation > div:last-child {
+  border: 0;
+}
+.profileEducation p {
+  margin: 0.5rem 0;
+}

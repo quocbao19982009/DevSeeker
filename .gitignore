@@ -1,0 +1,6 @@
+node_modules
+config/default.json
+devconnector_html_theme
+frontend/build
+frontend/node_modules
+frontend/.eslintcache

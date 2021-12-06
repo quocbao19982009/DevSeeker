@@ -1,0 +1,46 @@
+.profileTop {
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.profileTop img {
+  width: 250px;
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+
+.profileTop .icons a {
+  color: #fff;
+  margin: 0 0.3rem;
+}
+
+.profileTop .icons a:hover {
+  color: var(--dark-color);
+}
+
+.name {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+  .name {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+}

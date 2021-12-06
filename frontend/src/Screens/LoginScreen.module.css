@@ -1,0 +1,35 @@
+.register h1 {
+  color: var(--primary-color);
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.register p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin: 1.2rem 0;
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  background: var(--primary-color);
+  color: #fff;
+  display: inline-block;
+  padding: 0.4rem 1.3rem;
+  border: none;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  font: inherit;
+}
