@@ -59,8 +59,8 @@ router.post(
   createCommentPost
 );
 
-// PUT api/posts/unlike/:id
-// unlike a post
+// DELETE api/posts/:idpost/:idComment
+// Delete a comment
 // Private
 router.delete(
   "/comment/:id/:comment_id",

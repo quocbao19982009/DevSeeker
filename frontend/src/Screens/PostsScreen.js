@@ -9,7 +9,7 @@ import AddPost from "../components/postsComponents/AddPost";
 const PostsScreen = () => {
   const dispatch = useDispatch();
   const { posts, loading } = useSelector((state) => state.post);
-  console.log(posts);
+
   useEffect(() => {
     dispatch(getAllPosts());
   }, [dispatch]);

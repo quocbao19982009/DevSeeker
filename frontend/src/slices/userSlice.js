@@ -4,7 +4,7 @@ const initialState = {
   token: localStorage.getItem("token"),
   isLogin: null,
   loading: true,
-  user: null,
+  userInfo: {},
 };
 
 export const userSlice = createSlice({
@@ -23,7 +23,7 @@ export const userSlice = createSlice({
       return { ...state, ...action.payload, isLogin: true, loading: false };
     },
     userLogout: (state) => {
-      return { ...state, token: null, isLogin: false, user: null };
+      return { ...state, token: null, isLogin: false, userInfo: {} };
     },
   },
 });

@@ -9,7 +9,7 @@ const PostItem = ({ post }) => {
   const dispatch = useDispatch();
   const { _id, text, name, avatar, user: author, likes, comments, date } = post;
   const { userInfo: user } = useSelector((state) => state.user);
-  console.log(post);
+
   return (
     <>
       <div className={classes.post}>

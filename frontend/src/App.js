@@ -1,7 +1,6 @@
 import Navbar from "./components/layout/Navbar";
 import { Route, Routes } from "react-router-dom";
 import { useNavigate } from "react-router";
-
 import LandingScreen from "./Screens/LandingScreen";
 import RegisterScreen from "./Screens/RegisterScreen";
 import LoginScreen from "./Screens/LoginScreen";
@@ -9,6 +8,7 @@ import { useEffect } from "react";
 import setAuthToken from "./api/setAuthToken";
 import { store } from "./store";
 import { loadUser, logout } from "./actions/userAction";
+import PrivateRoute from "./components/PrivateRoute";
 import DashboardScreen from "./Screens/DashboardScreen";
 import CreateProfileScreen from "./Screens/CreateProfileScreen";
 import EditProfileScreen from "./Screens/EditProfileScreen";
@@ -40,15 +40,78 @@ function App() {
         <Route path="/" element={<LandingScreen />} />
         <Route path="register" element={<RegisterScreen />} />
         <Route path="login" element={<LoginScreen />} />
-        <Route path="dashboard" element={<DashboardScreen />} />
-        <Route path="create-profile" element={<CreateProfileScreen />} />
-        <Route path="edit-profile" element={<EditProfileScreen />} />
-        <Route path="add-experience" element={<AddExperienceScreen />} />
-        <Route path="add-education" element={<AddEducationScreen />} />
-        <Route path="profiles" element={<ProfilesScreen />} />
-        <Route path="profile/:id" element={<ProfileScreen />} />
-        <Route path="/posts" element={<PostsScreen />} />
-        <Route path="/posts/:id" element={<DetailPostScreen />} />
+        <Route
+          path="dashboard"
+          element={
+            <PrivateRoute>
+              <DashboardScreen />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="create-profile"
+          element={
+            <PrivateRoute>
+              <CreateProfileScreen />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="edit-profile"
+          element={
+            <PrivateRoute>
+              <EditProfileScreen />{" "}
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="add-experience"
+          element={
+            <PrivateRoute>
+              <AddExperienceScreen />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="add-education"
+          element={
+            <PrivateRoute>
+              <AddEducationScreen />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="profiles"
+          element={
+            <PrivateRoute>
+              <ProfilesScreen />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="profile/:id"
+          element={
+            <PrivateRoute>
+              <ProfileScreen />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/posts"
+          element={
+            <PrivateRoute>
+              <PostsScreen />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/posts/:id"
+          element={
+            <PrivateRoute>
+              <DetailPostScreen />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </>
   );

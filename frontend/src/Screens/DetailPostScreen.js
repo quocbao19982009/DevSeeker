@@ -4,16 +4,14 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Container from "../components/layout/Container";
 import { gettingPostById } from "../actions/postAction";
-import AddPost from "../components/postsComponents/AddPost";
-import PostItem from "../components/postsComponents/PostItem";
+import CommentItem from "../components/detailPostComponent/CommentItem";
 import AddComment from "../components/detailPostComponent/AddComment";
+import PostItemDetail from "../components/detailPostComponent/PostItemDetail";
 
 const DetailPostScreen = () => {
   const dispatch = useDispatch();
   const postId = useParams().id;
   const postDetails = useSelector((state) => state.post.post);
-
-  //   const { _id, user, text, name, avatar, likes, comments, data } = postDetails;
 
   useEffect(() => {
     dispatch(gettingPostById(postId));
@@ -22,12 +20,13 @@ const DetailPostScreen = () => {
   return (
     <Container>
       <h1 className={classes.title}>Posts</h1>
-
-      <AddComment />
+      {postDetails && <PostItemDetail post={postDetails} />}
+      <AddComment postId={postId} />
       <div className={classes.posts}>
-        {/* {posts.map((post) => (
-          <PostItem key={post._id} post={post} />
-        ))} */}
+        {postDetails &&
+          postDetails.comments.map((comment) => (
+            <CommentItem key={comment._id} comment={comment} postId={postId} />
+          ))}
       </div>
     </Container>
   );

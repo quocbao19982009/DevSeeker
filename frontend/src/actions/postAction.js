@@ -5,6 +5,8 @@ import {
   postError,
   updateLikes,
   getPost,
+  addComment,
+  removeComment,
 } from "../slices/postSlice";
 import { createAlert } from "./alertAction";
 
@@ -86,6 +88,37 @@ export const gettingPostById = (postId) => async (dispatch) => {
     const { data } = await api.get(`/posts/${postId}`);
 
     dispatch(getPost(data));
+  } catch (error) {
+    postError({
+      msg: error.response.data.msg,
+      status: error.response.status,
+    });
+  }
+};
+
+export const addingComment = (postId, formData) => async (dispatch) => {
+  try {
+    console.log(`/posts/comment/${postId}`, formData);
+    const { data } = await api.post(`/posts/comment/${postId}`, formData);
+
+    dispatch(addComment(data));
+
+    dispatch(createAlert("Comment Added", "success"));
+  } catch (error) {
+    postError({
+      msg: error.response.data.msg,
+      status: error.response.status,
+    });
+  }
+};
+
+export const removingComment = (postId, commentId) => async (dispatch) => {
+  try {
+    const { data } = await api.delete(`/posts/comment/${postId}/${commentId}`);
+
+    dispatch(addComment(data));
+
+    dispatch(createAlert("Comment Removed", "success"));
   } catch (error) {
     postError({
       msg: error.response.data.msg,

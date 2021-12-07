@@ -45,6 +45,25 @@ export const postSlice = createSlice({
     getPost: (state, action) => {
       return { ...state, post: action.payload, loading: false };
     },
+    addComment: (state, action) => {
+      return {
+        ...state,
+        post: { ...state.post, comments: action.payload },
+        loading: false,
+      };
+    },
+    removeComment: (state, action) => {
+      return {
+        ...state,
+        post: {
+          ...state.post,
+          comments: state.post.comments.filter(
+            (comment) => comment._id !== action.payload
+          ),
+        },
+        loading: false,
+      };
+    },
   },
 });
 
@@ -55,6 +74,8 @@ export const {
   deletePost,
   addPost,
   getPost,
+  addComment,
+  removeComment,
 } = postSlice.actions;
 
 export default postSlice.reducer;
