@@ -80,22 +80,8 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route
-          path="profiles"
-          element={
-            <PrivateRoute>
-              <ProfilesScreen />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="profile/:id"
-          element={
-            <PrivateRoute>
-              <ProfileScreen />
-            </PrivateRoute>
-          }
-        />
+        <Route path="profiles" element={<ProfilesScreen />} />
+        <Route path="profile/:id" element={<ProfileScreen />} />
         <Route
           path="/posts"
           element={

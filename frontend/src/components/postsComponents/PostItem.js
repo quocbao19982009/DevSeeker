@@ -26,7 +26,7 @@ const PostItem = ({ post }) => {
             onClick={() => {
               dispatch(addLike(_id));
             }}
-            type="butotn"
+            type="button"
             className={classes.btn}
           >
             <i className="fas fa-thumbs-up" />{" "}
@@ -41,11 +41,13 @@ const PostItem = ({ post }) => {
           >
             <i className="fas fa-thumbs-down" />
           </button>
-          <Link to={`/posts/${_id}`} className={classes.btnDiscussion}>
-            Discussion{" "}
-            {comments.length > 0 && (
-              <span className="comment-count">{comments.length}</span>
-            )}
+          <Link to={`/posts/${_id}`}>
+            <button className={classes.btnDiscussion}>
+              Discussion{" "}
+              {comments.length > 0 && (
+                <span className={classes.count}>{comments.length}</span>
+              )}
+            </button>
           </Link>
           {!user.loading && author === user._id && (
             <button

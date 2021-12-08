@@ -26,9 +26,15 @@
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  margin: auto;
 }
+
+.table .btnfunc {
+  text-align: center;
+}
+
 @media (max-width: 700px) {
-  .hide-sm {
+  .hide {
     display: none;
   }
 }

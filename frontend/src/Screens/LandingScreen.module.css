@@ -1,6 +1,6 @@
 .landing {
   position: relative;
-  background: url("../image/showcase.jpg") no-repeat center center/cover;
+  background: url("../image/background.jpg") no-repeat center center/cover;
   height: 100vh;
 }
 
@@ -54,7 +54,17 @@
   color: #fff;
 }
 
+.btn-primary:hover {
+  background-color: #cf711f;
+  color: #fff;
+}
+
 .btn-light {
   background: var(--light-color);
+  color: rgb(26, 19, 19);
+}
+
+.btn-light:hover {
+  background-color: #fdf2e9;
   color: rgb(26, 19, 19);
 }

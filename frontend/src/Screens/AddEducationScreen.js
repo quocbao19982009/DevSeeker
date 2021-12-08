@@ -27,12 +27,6 @@ const AddEducationScreen = () => {
   const onChangeHandler = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  useEffect(() => {
-    if (current === true) {
-      setFormData({ ...formData, to: "" });
-    }
-  }, [current, formData]);
-
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(addEducation(formData, navigate));
@@ -109,7 +103,7 @@ const AddEducationScreen = () => {
             name="description"
             cols="30"
             rows="5"
-            placeholder="Job Description"
+            placeholder="Tell us about your education..."
           ></textarea>
         </div>
         <button type="submit" className={`${classes.btn} ${classes.btnSubmit}`}>

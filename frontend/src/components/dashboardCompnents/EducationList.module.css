@@ -27,8 +27,13 @@
   transition: opacity 0.2s ease-in;
   outline: none;
 }
+
+.table .btnfunc {
+  text-align: center;
+}
+
 @media (max-width: 700px) {
-  .hide-sm {
+  .hide {
     display: none;
   }
 }

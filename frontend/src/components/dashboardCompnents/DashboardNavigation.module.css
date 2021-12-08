@@ -19,3 +19,11 @@
 .light i {
   color: var(--primary-color);
 }
+
+@media (max-width: 700px) {
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+}

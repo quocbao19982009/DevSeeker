@@ -22,9 +22,11 @@ const PostsScreen = () => {
       </p>
       <AddPost />
       <div className={classes.posts}>
-        {posts.map((post) => (
-          <PostItem key={post._id} post={post} />
-        ))}
+        {posts.length !== 0 ? (
+          posts.map((post) => <PostItem key={post._id} post={post} />)
+        ) : (
+          <p> No post was found! Please make a Post! </p>
+        )}
       </div>
     </Container>
   );

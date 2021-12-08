@@ -8,6 +8,7 @@ const AddPost = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(addingPost({ text: text }));
+    setText("");
   };
   return (
     <div className={classes.postForm}>

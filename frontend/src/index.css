@@ -3,7 +3,7 @@ code {
     monospace;
 }
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #e67e22;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -29,6 +29,9 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #cf711f;
+}
 ul {
   list-style: none;
 }
@@ -51,4 +54,8 @@ img {
 }
 .fa-instagram {
   color: #3f729b;
+}
+
+.fa-globe {
+  color: #0077b5;
 }

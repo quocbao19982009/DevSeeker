@@ -22,7 +22,6 @@
   background: var(--dark-color);
   color: #fff;
   display: inline-block;
-
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -30,4 +29,6 @@
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }

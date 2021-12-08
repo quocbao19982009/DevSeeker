@@ -22,7 +22,12 @@ const ProfileTop = (props) => {
       <p>{location && <span>{location}</span>} </p>
       <div className="icon my-1">
         {website ? (
-          <a href={website} target="_blank" rel="noopener noreferrer">
+          <a
+            className={classes.socialIcon}
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fas fa-globe fa-2x" />
           </a>
         ) : null}
@@ -33,6 +38,7 @@ const ProfileTop = (props) => {
               .filter(([_key, value]) => value)
               .map(([key, value]) => (
                 <a
+                  className={classes.socialIcon}
                   key={key}
                   href={value}
                   target="_blank"

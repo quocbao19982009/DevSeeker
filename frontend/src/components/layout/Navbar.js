@@ -33,7 +33,7 @@ const Navbar = () => {
   const publicLinks = (
     <ul>
       <li>
-        <Link to="/profiles">Developers</Link>
+        <Link to="/profiles">All Users</Link>
       </li>
       <li>
         <Link to="/register">Register</Link>
@@ -47,8 +47,8 @@ const Navbar = () => {
   return (
     <nav className={classes.navbar}>
       <h1>
-        <Link to="/">
-          <i className="fas fa-code"></i> DevConnector
+        <Link to="/" className={classes.logo}>
+          <i className="fas fa-code"></i> DevSeeker
         </Link>
       </h1>
       {!isLogin && publicLinks}

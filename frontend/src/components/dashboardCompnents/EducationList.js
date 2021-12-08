@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./ExperienceList.module.css";
+import classes from "./EducationList.module.css";
 import formatDate from "../../ulits/formatDate";
 import { deleteEducation } from "../../actions/profileAction";
 import { useDispatch } from "react-redux";
@@ -16,6 +16,7 @@ const EducationList = ({ education }) => {
             <th>School</th>
             <th className={classes.hide}>Degree</th>
             <th className={classes.hide}>Years</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -23,10 +24,10 @@ const EducationList = ({ education }) => {
             <tr key={edu._id}>
               <td>{edu.school}</td>
               <td className={classes.hide}>{edu.degree}</td>
-              <td>
+              <td className={classes.hide}>
                 {formatDate(edu.from)} - {edu.to ? formatDate(edu.to) : "Now"}
               </td>
-              <td>
+              <td className={classes.btnfunc}>
                 <button
                   onClick={() => dispatch(deleteEducation(edu._id))}
                   className={classes.btn}

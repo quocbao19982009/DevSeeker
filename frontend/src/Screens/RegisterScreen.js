@@ -94,7 +94,10 @@ const RegisterScreen = () => {
         </button>
       </form>
       <p className="my-1">
-        Already have an account? <Link to="/login">Sign In</Link>
+        Already have an account?{" "}
+        <Link to="/login" className={classes.Link}>
+          Sign In
+        </Link>
       </p>
     </Container>
   );

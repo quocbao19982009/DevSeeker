@@ -17,10 +17,11 @@ const LandingScreen = () => {
     <section className={classes.landing}>
       <div className={classes.overlay}>
         <div className={classes["landing-inner"]}>
-          <h1 className="x-large">Developer Connector</h1>
+          <h1 className="x-large">DevSeeker</h1>
           <p className="lead">
-            Create a developer profile/portfolio, share posts and get help from
-            other developers
+            DevSeeker is a place for programmers to connect, share knowladge and
+            look for future partnership. Create your profile, make post and
+            explore!
           </p>
           <div>
             <Link

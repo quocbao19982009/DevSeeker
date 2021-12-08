@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import classes from "./DetailPostScreen.module.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Container from "../components/layout/Container";
 import { gettingPostById } from "../actions/postAction";
@@ -19,7 +19,9 @@ const DetailPostScreen = () => {
 
   return (
     <Container>
-      <h1 className={classes.title}>Posts</h1>
+      <Link to="/posts">
+        <button className={classes.btn}>Go Back</button>{" "}
+      </Link>
       {postDetails && <PostItemDetail post={postDetails} />}
       <AddComment postId={postId} />
       <div className={classes.posts}>

@@ -20,11 +20,11 @@ const ProfilesScreen = () => {
         <Spinner />
       ) : (
         <>
-          <h1 className={classes.title}>Developers</h1>
+          <h1 className={classes.title}>Users</h1>
           <p className={classes.lead}>
             {" "}
-            <i className="fab fa-connectdevelop" />
-            Browse and connect with developers
+            <i className="fab fa-connectdevelop" /> Browse and connect with
+            fellow Job Seekers
           </p>
 
           <div>

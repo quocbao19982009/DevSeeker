@@ -15,6 +15,7 @@ const ExperienceList = ({ experience }) => {
             <th>Company</th>
             <th className={classes.hide}>Title</th>
             <th className={classes.hide}>Years</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -22,10 +23,10 @@ const ExperienceList = ({ experience }) => {
             <tr key={exp._id}>
               <td>{exp.company}</td>
               <td className={classes.hide}>{exp.title}</td>
-              <td>
+              <td className={classes.hide}>
                 {formatDate(exp.from)} - {exp.to ? formatDate(exp.to) : "Now"}
               </td>
-              <td>
+              <td className={classes.btnfunc}>
                 <button
                   onClick={() => dispatch(deleteExperience(exp._id))}
                   className={classes.btn}
