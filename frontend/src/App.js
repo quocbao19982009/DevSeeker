@@ -18,6 +18,7 @@ import ProfilesScreen from "./Screens/ProfilesScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
 import PostsScreen from "./Screens/PostsScreen";
 import DetailPostScreen from "./Screens/DetailPostScreen";
+import NotFoundScreen from "./Screens/NotFoundScreen";
 
 function App() {
   const navigate = useNavigate();
@@ -98,6 +99,7 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route path="/*" element={<NotFoundScreen />} />
       </Routes>
     </>
   );

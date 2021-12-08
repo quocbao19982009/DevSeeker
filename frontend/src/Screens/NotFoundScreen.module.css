@@ -1,0 +1,16 @@
+.notFound {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lead {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 2rem;
+}

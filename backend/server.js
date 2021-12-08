@@ -11,14 +11,23 @@ connectDB();
 // Middleware for accecpting JSON
 app.use(express.json());
 
-app.get("/", (req, res) => res.send("API Running"));
-
 // Define Routes
 
 app.use("/api/users", usersRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/profile", profileRoute);
 app.use("/api/posts", postsRoute);
+
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("frontend/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => res.send("API Running"));
+}
 
 const PORT = process.env.PORT || 5000;
 
