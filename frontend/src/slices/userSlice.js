@@ -23,7 +23,13 @@ export const userSlice = createSlice({
       return { ...state, ...action.payload, isLogin: true, loading: false };
     },
     userLogout: (state) => {
-      return { ...state, token: null, isLogin: false, userInfo: {} };
+      return {
+        ...state,
+        token: null,
+        isLogin: false,
+        userInfo: {},
+        loading: false,
+      };
     },
   },
 });
