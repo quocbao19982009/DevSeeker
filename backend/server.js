@@ -4,6 +4,7 @@ import usersRoute from "./routes/api/userRoutes.js";
 import postsRoute from "./routes/api/postRoutes.js";
 import profileRoute from "./routes/api/profileRoutes.js";
 import authRoute from "./routes/api/authRoutes.js";
+import path from "path";
 
 const app = express();
 connectDB();
